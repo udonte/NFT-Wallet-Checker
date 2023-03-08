@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useRouter } from 'next/router';
 import { Button, Modal, Card, Container, Row, Col } from 'react-bootstrap';
 
-const walletNFTs = () => {
+const WalletNFTs = () => {
   const [nfts, setNfts] = useState(null);
   const [selectedNft, setSelectedNft] = useState(null);
 
@@ -75,4 +75,4 @@ const walletNFTs = () => {
   )
 }
 
-export default walletNFTs;
+export default WalletNFTs;
