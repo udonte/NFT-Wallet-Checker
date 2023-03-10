@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { useRouter } from 'next/router';
 import { Button, Modal, Card, Container, Row, Col, } from 'react-bootstrap';
+import Link from 'next/link';
+
+
 
 const WalletNFTs = () => {
   const [nfts, setNfts] = useState(null);
@@ -8,6 +11,7 @@ const WalletNFTs = () => {
 
   const route = useRouter();
   const { wallet } = route.query;
+
 
   useEffect(() => {
     if (wallet) {
@@ -21,7 +25,7 @@ const WalletNFTs = () => {
       setNfts(JSON.parse(check));
     }
     else {
-      fetch(`https://api.opensea.io/api/v1/assets?owner=${String(wallet)}&limit=9`)
+      fetch(`https://api.opensea.io/api/v1/assets?owner=${String(wallet)}&limit=12`)
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
@@ -34,8 +38,22 @@ const WalletNFTs = () => {
   }
   return (
     <>
+      <nav className="navbar navbar-default bg-dark text-white  navbar-expand-lg navbar-light border-bottom">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <h1><a class="navbar-brand text-white font-weight-bold" href="#">AlturaNft</a></h1>
+          </div>
+          <ul class="nav navbar-nav">
+            <li><Link legacyBehavior href="/" className='mt-5'>
+                <a className ='btn btn-primary text-decoration-none' target='_blank' rel='noopener noreferrer'>Go back</a>
+              </Link></li>
+          </ul>
+
+            </div>
+          </nav>
       {nfts ? (
-        <Container className='bg-dark'>
+        <div className='bg-dark text-white h-100 d-flex justify-content-right w-100%'>
+          <Container className='bg-dark'>
             <Row>
               {nfts.map((nft, index) => {
                 return (
@@ -68,8 +86,8 @@ const WalletNFTs = () => {
               </Button>
             </Modal.Footer>
           </Modal>
-              
           </Container>
+          </div>
         ) : null}
     </>
   )
