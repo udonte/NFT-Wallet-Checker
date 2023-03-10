@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useRouter } from 'next/router';
-import { Button, Modal, Card, Container, Row, Col } from 'react-bootstrap';
+import { Button, Modal, Card, Container, Row, Col, } from 'react-bootstrap';
 
 const WalletNFTs = () => {
   const [nfts, setNfts] = useState(null);
@@ -35,7 +35,7 @@ const WalletNFTs = () => {
   return (
     <>
       {nfts ? (
-          <Container className='bg-light .blue__gradient'>
+        <Container className='bg-dark'>
             <Row>
               {nfts.map((nft, index) => {
                 return (

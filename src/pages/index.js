@@ -28,8 +28,16 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Container className='mt-5' styled={{ height: '100vh', display: 'flex' }}>
-      <h1 className='mb-5' >NFT CHECKER</h1>
+       <nav class="navbar navbar-default bg-dark text-white">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <a class="navbar-brand" href="#">AlturaNft</a>
+              </div>
+            </div>
+          </nav>
+      <div className='bg-dark text-white vh-100 d-flex justify-content-right w-100%'>
+      <Container className='fluid col-md-6 mx-auto'  >
+      <h1 className='mb-5 mt-5' >NFT CHECKER</h1>
         <Form onSubmit={GoToNFTPage}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Wallet address</Form.Label>
@@ -37,7 +45,8 @@ export default function Home() {
           </Form.Group>
           <Button variant="primary" type="submit">Search NFTs</Button>
           </Form>
-      </Container>
+        </Container>
+        </div>
     </>
   )
 }
