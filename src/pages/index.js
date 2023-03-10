@@ -28,10 +28,10 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-       <nav class="navbar navbar-default bg-dark text-white">
+       <nav className="navbar navbar-default bg-dark text-white  navbar-expand-lg navbar-light border-bottom">
             <div class="container-fluid">
               <div class="navbar-header">
-                <a class="navbar-brand" href="#">AlturaNft</a>
+                <h1><a class="navbar-brand text-white font-weight-bold" href="#">AlturaNft</a></h1>
               </div>
             </div>
           </nav>
