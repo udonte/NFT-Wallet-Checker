@@ -46,7 +46,7 @@ const WalletNFTs = () => {
           <div ></div>
           <ul class="nav navbar-nav ml-auto">
             <li className='nav-item'>
-                <p className='bg-dark text-white mt-5' style={{ textAlign: 'center' }}>Showing NFT Collections for: {wallet}</p>
+                <p className='bg-dark text-white mt-5' style={{ textAlign: 'right', color: 'red' }}>Showing NFT Collections for: <span style={{display: 'block', fontWeight: 'bold', color: 'yellowgreen'}}>{wallet}</span></p>
             </li>
           </ul>
           </div>
