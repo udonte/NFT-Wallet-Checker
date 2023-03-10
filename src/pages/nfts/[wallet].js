@@ -45,10 +45,9 @@ const WalletNFTs = () => {
           </div>
           <ul class="nav navbar-nav">
             <li><Link legacyBehavior href="/" className='mt-5'>
-                <a className ='btn btn-primary text-decoration-none' target='_blank' rel='noopener noreferrer'>Go back</a>
+                <a className ='btn btn-primary text-decoration-none' rel='noopener noreferrer'>Go back</a>
               </Link></li>
           </ul>
-
             </div>
           </nav>
       {nfts ? (
@@ -61,8 +60,8 @@ const WalletNFTs = () => {
                     <Card className='mb-2 mt-2 card-hover' onClick={() => setSelectedNft(nft)}>
                         <Card.Img variant="top" src={nft.image_url} />
                       <Card.Body>
-                        <Card.Title>{nft.name}</Card.Title>
-                        <Card.Text className='text-truncate'>{nft.description}</Card.Text>
+                        <Card.Title className='text-black' >{nft.name}</Card.Title>
+                        <Card.Text className='text-truncate text-black'>{nft.description}</Card.Text>
                         <Button variant='primary' onClick={() => setSelectedNft(nft)}>View Details</Button>
                     </Card.Body>
                     </Card> 
