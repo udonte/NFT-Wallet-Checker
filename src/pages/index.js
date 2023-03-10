@@ -41,7 +41,7 @@ export default function Home() {
         <Form onSubmit={GoToNFTPage}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Wallet address</Form.Label>
-            <Form.Control className='col-xs-12' type="text" placeholder="Enter wallet address e.g 0xc0E680dF15D9b5Eff9d5a426DC139CA4E23196Df" value={walletAddress} onChange={(e) => setWalletAddress(e.target.value)} style={{width: '40rem'}} />
+            <Form.Control col-xs-12 type="text" placeholder="Enter wallet address e.g 0xc0E680dF15D9b5Eff9d5a426DC139CA4E23196Df" value={walletAddress} onChange={(e) => setWalletAddress(e.target.value)} style={{width: '40rem'}} />
           </Form.Group>
           <Button variant="primary" type="submit">Search NFTs</Button>
           </Form>
