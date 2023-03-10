@@ -39,12 +39,12 @@ const WalletNFTs = () => {
   return (
     <>
       <nav className="navbar navbar-default bg-dark text-white  navbar-expand-lg navbar-light border-bottom">
-            <div class="container-fluid">
-              <div class="navbar-header">
-                <h1><a class="navbar-brand text-white font-weight-bold" href="#">AlturaNft</a></h1>
+            <div className="container-fluid">
+              <div className="navbar-header">
+                <h1><a className="navbar-brand text-white font-weight-bold" href="#">AlturaNft</a></h1>
           </div>
           <div ></div>
-          <ul class="nav navbar-nav ml-auto">
+          <ul className="nav navbar-nav ml-auto">
             <li className='nav-item'>
                 <p className='bg-dark text-white mt-5' style={{ textAlign: 'right', color: 'red' }}>Showing NFT Collections for: <span style={{display: 'block', fontWeight: 'bold', color: 'yellowgreen'}}>{wallet}</span></p>
             </li>
@@ -90,7 +90,9 @@ const WalletNFTs = () => {
             </Modal.Footer>
           </Modal>
           </Container>
-          </div>
+          <footer className="navbar navbar-default bg-dark text-white  navbar-expand-lg navbar-light border-top text-center d-flex align-items-center justify-content-center mt-5" ><p style={{ textAlign: 'center'}}>All Rights Reserved - 2023 </p></footer>
+        </div>
+        
         ) : null}
     </>
   )
