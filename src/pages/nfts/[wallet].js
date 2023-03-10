@@ -25,7 +25,7 @@ const WalletNFTs = () => {
       setNfts(JSON.parse(check));
     }
     else {
-      fetch(`https://api.opensea.io/api/v1/assets?owner=${String(wallet)}&limit=12`)
+      fetch(`https://api.opensea.io/api/v1/assets?owner=${String(wallet)}`)
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
@@ -43,15 +43,19 @@ const WalletNFTs = () => {
               <div class="navbar-header">
                 <h1><a class="navbar-brand text-white font-weight-bold" href="#">AlturaNft</a></h1>
           </div>
-          <ul class="nav navbar-nav">
-            <li><Link legacyBehavior href="/" className='mt-5'>
-                <a className ='btn btn-primary text-decoration-none' rel='noopener noreferrer'>Go back</a>
-              </Link></li>
+          <div ></div>
+          <ul class="nav navbar-nav ml-auto">
+            <li className='nav-item'>
+                <p className='bg-dark text-white mt-5' style={{ textAlign: 'center' }}>Showing NFT Collections for: {wallet}</p>
+            </li>
           </ul>
-            </div>
-          </nav>
+          </div>
+      </nav>
       {nfts ? (
-        <div className='bg-dark text-white h-100 d-flex justify-content-right w-100%'>
+        <div className='bg-dark text-white h-100 w-100%'>
+          <Link legacyBehavior href="/" className='mt-5 ml-2'>
+                <a className ='mt-3 ml-3 btn btn-primary text-decoration-none' rel='noopener noreferrer'>Go back</a>
+              </Link>
           <Container className='bg-dark'>
             <Row>
               {nfts.map((nft, index) => {
@@ -74,7 +78,7 @@ const WalletNFTs = () => {
               <Modal.Title>{selectedNft?.name}</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-              <Card.Img variant="top" src={selectedNft?.image_preview_url} />
+              <Card.Img variant="top" src={selectedNft?.image_preview_url} style={{height: '300px', width: '100%'}} />
               <p style={{fontWeight: 'bold'}}>Owner: {selectedNft?.asset_contract.name}</p>
               <p>{ selectedNft?.description }</p>
             </Modal.Body>
